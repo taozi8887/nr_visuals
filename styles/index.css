@@ -204,6 +204,7 @@ body {
 	width: 2.315vw;
     height: 2.315vw;
     border-radius: 999999999px;
+	padding: 0px;
     display: flex;
     flex-direction: row;
     justify-content: center;
