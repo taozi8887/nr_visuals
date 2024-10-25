@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	outline: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* CSS RESET */
+
+
+body {
+    background-color: #121212;
+	--dot-bg: #121212;
+	overflow-x: hidden;
+  --dot-color: rgba(233, 233, 233, 0.1);
+  --dot-size: 0.052vw;
+  --dot-space: 1.146vw;
+	background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 80%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 80%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+}
+
+.canvas {
+	width: 100vw;
+	height: 100vh;
+}
+
+.header {
+	display: flex;
+	align-items: flex-start;
+    flex-flow: row wrap;
+	z-index: 1;
+	position: relative;
+	pointer-events: auto;
+	transition: all 0.3s ease;
+}
+
+.bebas {
+	font-family: "Bebas Neue", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}  
+
+.header .logo {
+	width: 100%;
+	transition: all 0.3s ease;
+	flex: 0 0 50%;
+}
+
+.logo a {
+	color: rgb(223, 223, 223);
+	font-size: 10vw;
+	text-decoration: none;
+	line-height: 1.3511111111;
+	margin-left: 8.333vw;
+	z-index: 9999;
+	height: min-content;
+}
+
+.arrow {
+	transition: all 0.3s ease;
+	opacity: 0;
+	color: rgb(223, 223, 223);
+	font-size: 4.153vw;
+	text-decoration: none;
+	line-height: 1.6111111111;
+	margin-left: 0.833vw;
+}
+
+.logo:hover {
+	opacity: 1;
+	transform: translateX(-1.667vw);
+}
+
+.logo:hover .arrow {
+	opacity: 1;
+	transform: translateX(-1.667vw);
+}
+
+.nav {
+	width: 100%;
+	flex: 0 0 25%;
+	max-width: 25%;
+	margin-top: 4.167vw;
+	margin-left: 1.667vw;
+}
+
+.navlist {
+	list-style: none;
+}
+
+.navitem {
+	display: inline-block;
+}
+
+.rale {
+	font-family: "Raleway", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+  }
+
+.navitem a {
+	color: rgb(223, 223, 223);
+	text-decoration: none;
+	font-size: 1.2vw;
+    line-height: 120%;
+    margin: .87890625vw 2.34375vw 0 0;
+    display: block;
+    font-style: normal;
+    position: relative;
+	font-weight: 200;
+}
+
+.navitem a::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 1px;
+	bottom: 0;
+	left: 0;
+	background-color: rgb(223, 223, 223);
+	transition: transform 0.25s ease-out;
+}
+  
+.navitem a:hover::after {
+	transform: scaleX(1);
+}
+
+.navitem a::after {
+	transform-origin: bottom right;
+}
+  
+.navitem a:hover::after {
+	transform-origin: bottom left;
+}
+
+.headerhome {
+	font-size: 4.1666699219vw;
+	line-height: 91.5%;
+	letter-spacing: -.02em;
+	max-width: 25%;
+	position: absolute;
+	left: 62%;
+	font-weight: 600;
+	color: rgb(223, 223, 223);
+}
+
+.navbutton {
+	width: 2.315vw;
+    height: 2.315vw;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(223, 223, 223);
+	color: #121212;
+	cursor: pointer;
+	margin: 0.833vw;
+	margin-left: .74vw;
+	border: none;
+	font-size: 1.25vw;
+	transition: all 0.3s ease;
+}
+
+.navbuttons {
+	flex-direction: row;
+	align-items: flex-start;
+	flex: 0 0 8.3333333333%;
+	width: 100%;
+	display: flex;
+	margin-top: 3.75vw;
+}
+
+.navbutton:hover {
+	background-color: #9c9c9c;
+}
+
+.headerbottom {
+	position: absolute;
+	bottom: 0;
+	padding-bottom: 2.9296875vw;
+	display: flex;
+	align-items: flex-end;
+	margin-left: 8.333vw;
+}
+
+.bookbutton {
+	margin: .8333vw;
+	margin-right: 2.5vw;
+	color: #121212;
+	background-color: rgb(223, 223, 223);
+	border: none;
+	outline: none;
+	padding: 0.833vw 1.667vw;
+	font-size: 1.083vw;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.bookbutton:hover {
+	background-color: #9c9c9c;
+}
+
+/* Base styles for the element to be animated */
+.fade-in {
+	opacity: 0; /* Start fully transparent */
+	transform: translateY(-20px); /* Start slightly above its position */
+}
+/* Class to apply when the animation is triggered */
+.fade-in.active {
+	opacity: 1; /* Fully opaque */
+	transform: translateY(0); /* Move to original position */
+}
+
+.insta {
+	background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
+	background-clip: text;
+	color: transparent;
+	transition: all 0.2s ease;
+	cursor: pointer;
+	display: inline-block;
+	opacity: 1;
+	z-index: 1;
+}
+.insta:hover {
+	transform: translateY(-.3vw);
+}
+
+.headerhome::after {
+	content: "";
+	width: 102%;
+	height: 100%;
+	position: absolute;
+	top: 100%;
+	left: 2%;
+	border-top: .15vw solid rgb(223, 223, 223);
+}
+
+.main {
+	position: absolute;
+	top: 100vh;
+	height: 100vh;
+}
